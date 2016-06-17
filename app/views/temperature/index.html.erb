@@ -1,0 +1,7 @@
+<h1>Temperature conversion</h1>
+<%#= cowsay_path %>
+<%#= cowsay_submit_path %>
+<%= form_tag submit_temp_path do %>
+  <%= text_field_tag :temperature %>
+  <%= submit_tag "Convert from Celsius" %>
+<% end %>

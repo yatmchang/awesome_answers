@@ -1,0 +1,15 @@
+<h1> Bill Splitter </h1>
+
+<%= form_tag submit_bill_path do %>
+<label for="amount">Amount</label>
+  <%= text_field_tag :amount %><br>
+<label for="tip">Tip</label>
+  <%= text_field_tag :tips %><br>
+<label for="tax">Tax</label>
+  <%= text_field_tag :tax %><br>
+<label for="number-of-people">Number of People</label>
+  <%= text_field_tag :number %><br>
+  <%= submit_tag "Split it!" %>
+<% end %>
+
+<pre><%= @text %><%= @portion %></pre>

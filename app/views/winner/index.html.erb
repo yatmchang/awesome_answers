@@ -1,0 +1,10 @@
+<h1>Randomize a Winner</h1>
+<h2>Seperate names with commas</h2>
+<%#= cowsay_path %>
+<%#= cowsay_submit_path %>
+<%= form_tag randomize_winner_path do %>
+  <%= text_field_tag :randomize %>
+  <%= submit_tag "Pick a random winner" %>
+<% end %>
+
+<pre>The random winner is <%= @winner %></pre>
