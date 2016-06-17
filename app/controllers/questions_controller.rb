@@ -63,4 +63,10 @@ class QuestionsController < ApplicationController
     redirect_to new_session_path, alert: "please sign in" unless user_signed_in?
   end
 
+  def authorize_owner
+    unless can? :manage, @question
+      redirect_to root_path, alert: "access denied"
+    end
+  end
+
 end
